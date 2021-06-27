@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>gallery</title>
+    <link href="PagesStyling.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html">
+        <img
+          src="Assets/logos/sorrento_by_the_sea_logo.jpg"
+          alt="Company logo"
+        />
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <article>
+      <section id="left-column">
+        <h1>Gallery</h1>
+        <h2>Resort Pictures</h2>
+        <div class="slideshow-container">
+          <img id="slide" />
+          <div>
+            <button id="previous" onclick="incrementSlideNumber(-1)">
+              Previous
+            </button>
+            <button id="next" onclick="incrementSlideNumber(1)">Next</button>
+          </div>
+          <br />
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+          <div class="all-thumbnails">
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="Assets/images/apartment_front.jpg"
+                alt="Building Entrance"
+                onclick="showSlide(1)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="Assets/images/apartment_garden.jpg"
+                alt="Garden Photo"
+                onclick="showSlide(2)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="Assets/images/sorrento_from_jetty.jpg"
+                alt="View From Jetty"
+                onclick="showSlide(3)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="Assets/images/ocean_beach.jpg"
+                alt="Ocean Photo"
+                onclick="showSlide(4)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="Assets/images/back_beach_sorrento.jpg"
+                alt="Back Beach"
+                onclick="showSlide(5)"
+              />
+            </div>
+            <div class="thumbnail">
+              <img
+                class="thumbnail-img"
+                src="Assets/images/ocean_beach3.jpg"
+                alt="Beach Photo"
+                onclick="showSlide(6)"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="right-column">
+        <h1>Highlights of Local Area</h1>
+        <h2>Wineries and Restaurants</h2>
+        <p>
+          There are more than 55 wineries to choose from - offering cellar door
+          sales, restaurants, cafes and tours. Along the way discover a foodie’s
+          paradise. Meet the growers, producers, providers and chefs. Experience
+          the fun of picking your own produce or buying dinner ingredients at
+          the farm gate. Dine with views of the sea, lakes and vineyards.
+        </p>
+        <h2>Golf</h2>
+        <p>
+          The Mornington Peninsula is blessed with 19 courses that both
+          challenge and excite. Many golf courses provide the most exhilarating
+          views over Port Phillip Bay, Western Port and Bass Strait. The sand
+          hills and coastal hinterland provide wonderful examples of links,
+          resort and traditional courses. Visitors are always welcome.
+        </p>
+        <h2>Peninsula Hot Springs</h2>
+        <p>
+          Another world awaits. Enjoy the thermal bathing area or book a private
+          indoor or outdoor hot springs bath experience.
+        </p>
+        <p>
+          Activities include reflexology treatments, foot and hand baths, sauna,
+          steam baths, cold plunges and yoga. The cafe at the bath house
+          provides light meals and gourmet pizzas. Feel revitalised and relaxed
+          at the same time.
+        </p>
+        <h2>Queenscliff-Sorrento Ferry</h2>
+        <p>
+          There's no better way to cross the Bay either with your car or as a
+          foot passenger. It only takes 40 minutes. Spot the playful dolphins
+          whilst enjoying a coffee and light refreshments. The ferries run every
+          day of the year on the hour. Wonderful restaurants at historic
+          Queenscliff on the Bellarine peninsula offer perfect lunchtime
+          adventures.
+        </p>
+        <h2>Walking Tracks</h2>
+        <p>
+          Fabulous walking tracks in any direction for all ages. Beautiful beach
+          walks, amazing cliff top strolls and for the more serious walkers, a
+          100km walk combines the Bay trial, National Parks and the two Bays
+          walk through the hinterland.
+        </p>
+        <h2>Arts and Culture</h2>
+        <p>
+          The Mornington Peninsula hosts an array of exhibitions and galleries,
+          featuring fine art, sculpture, ceramics, jewelry, hand blown glass and
+          clothing. Small local galleries and craft markets are in abundance
+          across the region.
+        </p>
+        <h2>Shopping Escapades</h2>
+        <p>
+          Lovely, leisurely shopping - for pure pleasure - is listed as the
+          number one activity for holidaymakers.
+        </p>
+        <p>
+          Sorrento and Mornington will not disappoint. Bookshops, giftware, home
+          living and of course the odd handbag or "must have that" top is yours
+          for the exploring.
+        </p>
+        <h2>Water Sports</h2>
+        <p>
+          Endless Fun for all the family. Sailing, fishing, kayaking, paddle
+          boarding, snorkeling, scuba diving and surfing are all on offer, not
+          to mention the cricket match on the beach.
+        </p>
+      </section>
+    </article>
+    <footer>
+      <div class="footer-links">
+        <div class="external-links">
+          <div>
+            <p>Follow Us:</p>
+            <a href="http://www.facebook.com/" target="_blank"
+              ><img src="Assets/logos/facebook_small.png" alt="facebook logo"
+            /></a>
+            <a href="http://www.instagram.com/" target="_blank"
+              ><img src="Assets/logos/instagram_small.png" alt="instagram logo"
+            /></a>
+            <a href="http://www.twitter.com/" target="_blank"
+              ><img src="Assets/logos/twitter_small.png" alt="twitter logo"
+            /></a>
+            <a href="http://www.youtube.com/" target="_blank"
+              ><img
+                src="Assets/logos/youtube-variation_small.png"
+                alt="youtube logo"
+            /></a>
+          </div>
+          <div>
+            <p>We Accept:</p>
+            <a href="http://www.paypal.com/" target="_blank"
+              ><img src="Assets/logos/paypal_small.png" alt="paypal logo"
+            /></a>
+            <a href="https://www.visa.com.au/" target="_blank"
+              ><img src="Assets/logos/visacard.png" alt="visacard logo"
+            /></a>
+            <a href="https://www.apple.com/au/apple-pay/" target="_blank"
+              ><img
+                src="Assets/logos/apple_pay_logo.png"
+                width="27"
+                alt="apple pay logo"
+            /></a>
+          </div>
+        </div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p id="footer-address">
+          Address: <br />
+          42 Holyrood Avenue Sorrento VIC 3943<br />
+          <br />
+          Phone:<br />
+          0435 123 456
+        </p>
+      </div>
+      <p>© 2020 by Sorrento by the Sea - Luxury Apartments</p>
+    </footer>
+    <script>
+      class Image {
+        constructor(p, d) {
+          this.path = p;
+          this.description = d;
+        }
+      }
+
+      const images = [
+        new Image("Assets/images/apartment_front.jpg", "Building Entrance"),
+        new Image("Assets/images/apartment_garden.jpg", "Garden"),
+        new Image("Assets/images/sorrento_from_jetty.jpg", "View From Jetty"),
+        new Image("Assets/images/ocean_beach.jpg", "Ocean View"),
+        new Image("Assets/images/back_beach_sorrento.jpg", "Back Beach"),
+        new Image("Assets/images/ocean_beach3.jpg", "Beach Photo"),
+      ];
+
+      let slideIndex = 1;
+      showSlide(slideIndex);
+
+      function incrementSlideNumber(n) {
+        slideIndex += n;
+        showSlide(slideIndex);
+      }
+
+      function showSlide(n) {
+        slideIndex = n;
+        if (n > images.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = images.length;
+        }
+        document.getElementById("slide").src = images[slideIndex - 1].path;
+        document.getElementById("slide").alt =
+          images[slideIndex - 1].description;
+        document.getElementById("caption").innerHTML =
+          images[slideIndex - 1].description;
+      }
+    </script>
+  </body>
+</html>

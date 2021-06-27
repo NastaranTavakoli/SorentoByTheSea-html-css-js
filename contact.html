@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>contact</title>
+    <link href="PagesStyling.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html">
+        <img
+          src="Assets/logos/sorrento_by_the_sea_logo.jpg"
+          alt="Company logo"
+        />
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="active"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <article>
+      <section id="left-column">
+        <h1>Getting here</h1>
+        <p>
+          It is easy to find. From Melbourne, take the Monash Freeway, connect
+          onto the Eastlink heading for Portsea, then onto the Peninsula link to
+          Sorrento.
+        </p>
+        <p>
+          Another option is the scenic drive around the beach. Although longer,
+          it allows you to experience the coastline from Port Melbourne to
+          Sorrento.
+        </p>
+        <p>
+          If you choose to come across on the Queenscliff/Sorrento Ferry, it is
+          only a 2 minute drive from the Ferry Depot. If you are a foot
+          passenger we are happy to meet you at the Sorrento ferry at. Just
+          phone us on 0435 123 456 as you arrive.
+        </p>
+        <h1>Contact Info</h1>
+        <p>
+          Information and Bookings<br />
+          Phone: 0435 123 456<br />
+          Address: 42 Holyrood Avenue Sorrento VIC 3943
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.067380353107!2d144.7476206153342!3d-38.3474224796592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad4357b0e516369%3A0xf1dce538da37e359!2s42%20Holyrood%20Ave%2C%20Sorrento%20VIC%203943!5e0!3m2!1sen!2sau!4v1599956509341!5m2!1sen!2sau"
+        ></iframe>
+      </section>
+      <section id="right-column">
+        <h1>Enquiries</h1>
+        <form
+          id="contact-form"
+          onsubmit="return validateAll(this)"
+          action="#"
+          method="post"
+        >
+          <label id="lblUsername" for="txtUsername">Username:</label
+          ><span id="txtUsername_Help"></span><br /><input
+            id="txtUsername"
+            type="text"
+            onblur="return validateUsername(this, txtUsername_Help)"
+          />
+
+          <label id="lblEmail" for="txtEmail">Email:</label
+          ><span id="txtEmail_Help"></span><br /><input
+            id="txtEmail"
+            type="text"
+            onblur="return validateEmail(this, txtEmail_Help)"
+          />
+
+          <label id="lblPhone" for="txtPhone">Phone:</label
+          ><span id="txtPhone_Help"></span><br /><input
+            id="txtPhone"
+            type="text"
+            onblur="console.log(this, txtPhone_Help); return validatePhone(this, txtPhone_Help)"
+          />
+
+          <label id="lblMessage" for="txtMessage">Message:</label
+          ><span id="txtMessage_Help"></span><br /><textarea
+            id="txtMessage"
+            placeholder="Write something..."
+            rows="12"
+            onblur="return validateNonEmpty(this, txtMessage_Help)"
+          ></textarea>
+          <div id="form-button">
+            <input name="Submit" type="submit" value="Submit" />
+            <input name="Reset" type="reset" value="Reset" />
+          </div>
+        </form>
+      </section>
+    </article>
+    <footer>
+      <div class="footer-links">
+        <div class="external-links">
+          <div>
+            <p>Follow Us:</p>
+            <a href="http://www.facebook.com/" target="_blank"
+              ><img src="Assets/logos/facebook_small.png" alt="facebook logo"
+            /></a>
+            <a href="http://www.instagram.com/" target="_blank"
+              ><img src="Assets/logos/instagram_small.png" alt="instagram logo"
+            /></a>
+            <a href="http://www.twitter.com/" target="_blank"
+              ><img src="Assets/logos/twitter_small.png" alt="twitter logo"
+            /></a>
+            <a href="http://www.youtube.com/" target="_blank"
+              ><img
+                src="Assets/logos/youtube-variation_small.png"
+                alt="youtube logo"
+            /></a>
+          </div>
+          <div>
+            <p>We Accept:</p>
+            <a href="http://www.paypal.com/" target="_blank"
+              ><img src="Assets/logos/paypal_small.png" alt="paypal logo"
+            /></a>
+            <a href="https://www.visa.com.au/" target="_blank"
+              ><img src="Assets/logos/visacard.png" alt="visacard logo"
+            /></a>
+            <a href="https://www.apple.com/au/apple-pay/" target="_blank"
+              ><img
+                src="Assets/logos/apple_pay_logo.png"
+                width="27"
+                alt="apple pay logo"
+            /></a>
+          </div>
+        </div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p id="footer-address">
+          Address: <br />
+          42 Holyrood Avenue Sorrento VIC 3943<br />
+          <br />
+          Phone:<br />
+          0435 123 456
+        </p>
+      </div>
+      <p>© 2020 by Sorrento by the Sea - Luxury Apartments</p>
+    </footer>
+    <script>
+      function validateNonEmpty(tf, helpText) {
+        let value = tf.value;
+        if (value) {
+          helpText.innerHTML = "";
+          return true;
+        } else {
+          helpText.innerHTML = "Empty input";
+          return false;
+        }
+      }
+
+      function validateContactsNonEmpty() {
+        var emailNotEmpty = document.getElementById("txtEmail").value;
+        var PhoneNotEmpty = document.getElementById("txtPhone").value;
+        if (!emailNotEmpty && !PhoneNotEmpty) {
+          txtEmail_Help.innerHTML =
+            "At least one contact field should be provided";
+          txtPhone_Help.innerHTML =
+            "At least one contact field should be provided";
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+      function validateUsername(tf, helpText) {
+        var isNotEmpty = validateNonEmpty(tf, helpText);
+        if (isNotEmpty == false) {
+          return false;
+        }
+        var value = tf.value;
+        var regex = /(?=.*?[A-Z])(?=.*?[a-z])/;
+        var isValid = regex.test(value);
+
+        if (isValid) {
+          helpText.innerHTML = "";
+          return true;
+        } else {
+          helpText.innerHTML =
+            "Invalid username - Must contain at least one uppercase and one lowercase letters";
+          return false;
+        }
+      }
+
+      function validateEmail(tf, helpText) {
+        let value = tf.value;
+        if (value) {
+          var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          var isValid = regex.test(value);
+          if (isValid) {
+            helpText.innerHTML = "";
+            return true;
+          } else {
+            helpText.innerHTML = "Invalid Email";
+            return false;
+          }
+        } else {
+          return true;
+        }
+      }
+
+      function validatePhone(tf, helpText) {
+        var value = tf.value;
+        if (value) {
+          var regex = /^\d{8,}$/;
+          var isValid = regex.test(value);
+
+          if (isValid) {
+            helpText.innerHTML = "";
+            return true;
+          } else {
+            helpText.innerHTML =
+              "Invalid Phone - must contain 8 or more of digit-only characters";
+            return false;
+          }
+        } else {
+          return true;
+        }
+      }
+
+      function validateAll(form) {
+        let success = true;
+        success = validateContactsNonEmpty() && success;
+        for (var i = 0; i < form.elements.length; i++) {
+          let e = form.elements[i];
+          if (e.onblur) {
+            success = e.onblur() && success;
+          }
+        }
+        return success;
+      }
+    </script>
+  </body>
+</html>

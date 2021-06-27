@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sorrento by the Sea</title>
+    <link href="PagesStyling.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <a href="home.html">
+        <img
+          src="Assets/logos/sorrento_by_the_sea_logo.jpg"
+          alt="Company logo"
+        />
+      </a>
+    </header>
+    <nav>
+      <ul>
+        <li class="active"><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <article>
+      <section id="left-column">
+        <h1>A Luxury Accomodation</h1>
+        <p>
+          We offer a spacious living area overlooking a beautiful garden. A
+          private entrance allows you to come and go as you please.
+        </p>
+        <p>Modern and elegant bathroom</p>
+        <p>Queen sized bedroom suite</p>
+        <p>Car parking is close by with room for a boat as well!</p>
+        <p>
+          Your luxury apartment consists of a spacious separate living area with
+          leather furniture overlooking a private garden for you to enjoy.
+        </p>
+        <p>
+          A separate Queen sized bedroom suite with quality linen also overlooks
+          the garden. The modern, elegant bathroom has a luxurious bath that
+          entices you to unwind and relax whilst overlooking a private courtyard
+          fernery.
+        </p>
+        <p>
+          Amenities include top quality bedding, fluffy towels, bath robes,
+          vanity packs, hair dryer, beach towels and chairs, a picnic basket,
+          coffee machine and pods, a microwave/convection oven, a toaster, a
+          kettle, a sandwich maker and BBQ tools.
+        </p>
+        <p>
+          Sit back and relax and take a breather. Read a book, go for a beach
+          walk, have a sleep-in. It’s your private space to enjoy.
+        </p>
+        <p>
+          We offer locally sourced provisions for a hearty breakfast together
+          with home-made biscuits and chocolates.
+        </p>
+        <iframe
+          id="youtube-video"
+          src="https://www.youtube.com/embed/kPAJi88DOiE"
+        ></iframe>
+      </section>
+      <section id="right-column">
+        <h1>Pricing</h1>
+        <table>
+          <tr>
+            <th>Date:</th>
+            <th>Selected Dates:</th>
+            <th>Prices:</th>
+          </tr>
+          <tr>
+            <td>
+              <select id="month-dropdown"></select>
+              <select id="day-dropdown" onfocus="dayOptions()">
+                <option value="" disabled selected hidden>
+                  Select the day
+                </option></select
+              ><br />
+              <button id="btn-add" onclick="addDate()">Add Date</button
+              ><br /><br />
+              <select
+                id="selected-dates-dropdown"
+                onfocus="selectedDateOptions()"
+              >
+                <option value="" disabled selected hidden>
+                  Select the day to remove
+                </option></select
+              ><br />
+              <button id="btn-remove" onclick="removeDate()">
+                Remove Date
+              </button>
+            </td>
+            <td id="selected-dates"></td>
+            <td id="price"></td>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <th id="total">Total: $0</th>
+          </tr>
+        </table>
+        <h3>Terms and conditions:</h3>
+        <p>A full refund will be given prior to 30 days cancellation</p>
+        <p>50% refund will be given after 30 days of cancellation.</p>
+        <p>
+          In the event of a weekly or monthly booking the apartment will be
+          serviced weekly unless by prior arrangement.
+        </p>
+        <p>Total amount is payable upon booking.</p>
+        <p>The apartment is strictly non-smoking</p>
+        <p>The pricing is for 2 people.</p>
+        <a class="content-links" href="contact.html">BOOK NOW!</a>
+      </section>
+    </article>
+    <footer>
+      <div class="footer-links">
+        <div class="external-links">
+          <div>
+            <p>Follow Us:</p>
+            <a href="http://www.facebook.com/" target="_blank"
+              ><img src="Assets/logos/facebook_small.png" alt="facebook logo"
+            /></a>
+            <a href="http://www.instagram.com/" target="_blank"
+              ><img src="Assets/logos/instagram_small.png" alt="instagram logo"
+            /></a>
+            <a href="http://www.twitter.com/" target="_blank"
+              ><img src="Assets/logos/twitter_small.png" alt="twitter logo"
+            /></a>
+            <a href="http://www.youtube.com/" target="_blank"
+              ><img
+                src="Assets/logos/youtube-variation_small.png"
+                alt="youtube logo"
+            /></a>
+          </div>
+          <div>
+            <p>We Accept:</p>
+            <a href="http://www.paypal.com/" target="_blank"
+              ><img src="Assets/logos/paypal_small.png" alt="paypal logo"
+            /></a>
+            <a href="https://www.visa.com.au/" target="_blank"
+              ><img src="Assets/logos/visacard.png" alt="visacard logo"
+            /></a>
+            <a href="https://www.apple.com/au/apple-pay/" target="_blank"
+              ><img
+                src="Assets/logos/apple_pay_logo.png"
+                width="27"
+                alt="apple pay logo"
+            /></a>
+          </div>
+        </div>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <p id="footer-address">
+          Address: <br />
+          42 Holyrood Avenue Sorrento VIC 3943<br />
+          <br />
+          Phone:<br />
+          0435 123 456
+        </p>
+      </div>
+      <p>© 2020 by Sorrento by the Sea - Luxury Apartments</p>
+    </footer>
+    <script src="priceCalculator.js"></script>
+  </body>
+</html>
